@@ -1,0 +1,45 @@
+{
+  "manifest_version": 3,
+  "name": "Page Analyzer with wllama",
+  "version": "1.0",
+  "description": "Analyze the content of the current page and ask questions about it using wllama.",
+  "permissions": ["activeTab", "scripting", "declarativeNetRequest", "declarativeNetRequestWithHostAccess", "storage"],
+  "host_permissions": ["<all_urls>"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "logo.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "icons": {
+    "48": "logo.png",
+    "128": "logo.png"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "wasm/single-thread/wllama.wasm",
+        "wasm/multi-thread/wllama.wasm",
+        "models/stories15M-q4_0.gguf",
+        "models/Lite-Mistral-150M-v2-Instruct-Q4_K_M.gguf",
+        "models/qwen2.5-0.5b-instruct-q8_0.gguf",
+        "models/qwen2.5-0.5b-instruct-q4_k_m.gguf",
+        "models/qwen2.5-1.5b-instruct-q4_k_m.gguf",
+        "models/Llama-3.2-1B-Instruct-Q4_K_M.gguf",
+        "models/DeepSeek-R1-Distill-Qwen-1.5B-Q4_K_M.gguf"
+      ],
+      "matches": ["<all_urls>"]
+    }
+  ],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self' 'wasm-unsafe-eval' http://localhost:* http://127.0.0.1:*; object-src 'self'"
+  }
+}
