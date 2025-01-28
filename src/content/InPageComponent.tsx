@@ -1,4 +1,4 @@
-import React, { CSSProperties, JSX, useCallback, useRef, useState } from 'react'
+import React, { JSX, useCallback, useRef, useState } from 'react'
 import { Wllama } from '@wllama/wllama'
 import { FaCheck, FaSpinner, FaTimes } from 'react-icons/fa'
 import './style.css'
