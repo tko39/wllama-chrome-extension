@@ -19,7 +19,7 @@ We recommend using qwen2.5-0.5b-instruct-q4_k_m.gguf. See `public/models/sources
 
 To install the extension, follow these steps:
 
-1. Clone the repository using `git clone https://github.com/your-username/your-repo-name.git`
+1. Clone the repository using `git clone https://github.com/tko39/wllama-chrome-extension.git`
 2. Go to the Chrome extensions page by typing `chrome://extensions/` in the address bar
 3. Enable developer mode
 4. Click "Load unpacked"
