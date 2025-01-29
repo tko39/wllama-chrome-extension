@@ -1,6 +1,6 @@
 # Wllama chrome extension
 
-A Chrome extension for analyzing the current page you're browsing.
+A Chrome extension based on [Wllama](https://github.com/ngxson/wllama/) for analyzing the current page you're browsing.
 
 ## Main Functionality
 
