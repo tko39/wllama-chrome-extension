@@ -7,9 +7,18 @@ A Chrome extension for analyzing the current page you're browsing.
 The main functionality of the extension is implemented in `InPageComponent.tsx`. This component is responsible for analyzing the current page and providing insights by interacting with the user.
 The entire conversation is in the browser, in such case no data is transferred to any third party by this extension. The entire conversation is in the browser.
 
+## Usage
+
+After loading the extension:
+- Click the new icon, and slide the slder to enable on the page. Since not all websites allow loading workers / wasm, it will not work on every page.
+- In the dialog, click `fetch page content` when you are satisfied with the current content. Timing is relevant for dynamic pages.
+- Ask a question
+- ...
+- Profit
+
 ## Models
 
-We recommend using qwen2.5-0.5b-instruct-q4_k_m.gguf. See `public/models/sources.txt` for downloading from `huggingface.co`, the model should be put next to `sources.txt`
+We recommend using `qwen2.5-0.5b-instruct-q4_k_m.gguf`. See `public/models/sources.txt` for downloading from `huggingface.co`, the model should be put next to `sources.txt`
 
 ## Features
 
